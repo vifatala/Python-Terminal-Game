@@ -189,7 +189,8 @@ def whiteBackground(sentence = ""):
     print('\u001b[0m')
     print(" " * 9999)
     cls()
-        
+
+
 # ------------ GAME INTRODUCTION -------------------------:
 
 getpass(title) 
@@ -751,5 +752,6 @@ print(ending2)
 sleep(1.3)
 textAnimation("Thanks for playing, " + playerName + "!")
 print("")
-textAnimation("Created by Victor Fatala and Brian Ho")
+textAnimation("Programmed by Victor Fatala")
+textAnimation("Plot by Victor Fatala and Brian Ho")
 
