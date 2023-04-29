@@ -8,12 +8,11 @@ from time import sleep
 class Format:
     end = '\x1B[0m'
     underline = '\x1B[4m'
- 
-
 
 
 # \\\\\\\\ ** FUNCTIONS!!! ** \\\\\\\
-# -------------- Function menu options:
+
+# Menu options:
 def menu(choice1 = "", choice2 = "", choice3 = "", choice4 = "", choice5 = ""):
     myList = [choice1, choice2, choice3, choice4, choice5]
     letterStart = 64
@@ -21,7 +20,6 @@ def menu(choice1 = "", choice2 = "", choice3 = "", choice4 = "", choice5 = ""):
     correctAnswer = False
     listOfChoices = []
     answer = ""
-    
     print("-----------------")
     
     for item in myList:
@@ -32,10 +30,8 @@ def menu(choice1 = "", choice2 = "", choice3 = "", choice4 = "", choice5 = ""):
         print(chr(letterStart) + ") " + item)
         listOfChoices.append(chr(letterStart))
         sleep(0.3)
-    
     print("-----------------")
 
-    #print(listOfChoices)
     while correctAnswer == False:
         try:
             answer = input("> ")
@@ -46,7 +42,6 @@ def menu(choice1 = "", choice2 = "", choice3 = "", choice4 = "", choice5 = ""):
         except ValueError:
             if answer == "":
                 continue
-            
             else:
                 print("")
                 print("Sorry, that's not an option!")
@@ -54,20 +49,15 @@ def menu(choice1 = "", choice2 = "", choice3 = "", choice4 = "", choice5 = ""):
     print("")
     
 
-
-# ---------------- Function to clear the screen:
+# Clear the screen:
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
 
 
-
-
-
-# ------- Function for animations:
+# Animations:
 # This function gets the first frame you want to show up. Then it gets the 
 # second frame you want to appear. Next, it gets the time between each frame. 
 # And lastly, the 'loops' (how many times you want the animation to repeat).
-
 def animation(frame1, frame2, timeBetweenFrames, loops):
     for i in range(loops):
         print(frame1)
@@ -82,7 +72,8 @@ def animation(frame1, frame2, timeBetweenFrames, loops):
         
         cls()
 
-# ------- Function for animating text:
+
+# Animating text:
 def textAnimation(sentence, timeBetweenLetters=0.02):
     chars = sentence
     loop = range(1, len(chars) + 1)
@@ -93,10 +84,7 @@ def textAnimation(sentence, timeBetweenLetters=0.02):
     print("")
  
     
-
-
-# --------- Function for the phone message:
-
+# Phone message:
 def phoneMessage(message):
     message = str(message)
     messagePart1 = message
@@ -153,7 +141,8 @@ def phoneMessage(message):
     
     """)
     
-# --------- Function for Game Over screen:
+
+# Game Over screen:
 def gameOver(time, sentence=""):
     cls()
     print("""
@@ -188,12 +177,14 @@ def gameOver(time, sentence=""):
     quit()
 
             
-        
+# Make background go black (only for web Python interpreters):  
 def blackground(sentence = ""):
     print('\x1b[40m''\x1b[97m')
     print(" " * 9999)
     cls()
-    
+
+
+# Make background go white (only for web Python interpreters):     
 def whiteBackground(sentence = ""):
     print('\u001b[0m')
     print(" " * 9999)
@@ -686,7 +677,6 @@ if thinkOption == 2:
     gameOver(1, "you got the 'Banana Ending'!")
 
 # Master Oogway option
-
 textAnimation(". . .", 0.5)
 print("")
 textAnimation("[You feel connected.]")
