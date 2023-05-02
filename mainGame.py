@@ -754,4 +754,5 @@ textAnimation("Thanks for playing, " + playerName + "!")
 print("")
 textAnimation("Programmed by Victor Fatala")
 textAnimation("Plot by Victor Fatala and Brian Ho")
+textAnimation("(Most of ASCII Art used was taken from: https://www.asciiart.eu)")
 
